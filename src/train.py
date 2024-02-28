@@ -29,4 +29,4 @@ class ProjectAgent:
         pass
 
     def load(self):
-        self.rf = joblib.load('rf.joblib')
+        self.rf = joblib.load('src/rf.joblib')
