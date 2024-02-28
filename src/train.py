@@ -14,6 +14,7 @@ env = TimeLimit(
 # ENJOY!
 class ProjectAgent:
     def __init__(self):
+        self.nb_actions = 4
        
         
     def act(self, observation, use_random=False):
@@ -29,4 +30,3 @@ class ProjectAgent:
 
     def load(self):
         self.rf = joblib.load('rf.joblib')
-        self.nb_actions = 4
