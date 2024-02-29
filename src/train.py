@@ -18,12 +18,11 @@ class ProjectAgent:
        
         
     def act(self, observation, use_random=False):
-        Q2 = np.zeros(self.nb_actions)
-        for a2 in range(self.nb_actions):
-            A2 = a2
-            S2A2 = np.append(observation,A2)
-            Q2[a2] = self.rf.predict(S2A2.reshape(1, -1))
-        return np.argmax(Q2)
+        Qsa = []
+        for a in range(self.nb_actions):
+            sa = np.append(observation,a).reshape(1, -1)
+            Qsa.append(Q.predict(sa))
+        return np.argmax(Qsa)
 
     def save(self, path):
         pass
