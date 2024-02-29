@@ -28,4 +28,4 @@ class ProjectAgent:
         pass
 
     def load(self):
-        self.rf = joblib.load('src/rf.joblib')
+        self.rf = joblib.load('src/rf1000_iter.joblib')
