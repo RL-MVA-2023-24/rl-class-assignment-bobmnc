@@ -21,7 +21,7 @@ class ProjectAgent:
         Qsa = []
         for a in range(self.nb_actions):
             sa = np.append(observation,a).reshape(1, -1)
-            Qsa.append(Q.predict(sa))
+            Qsa.append(self.rf.predict(sa))
         return np.argmax(Qsa)
 
     def save(self, path):
